@@ -1,0 +1,40 @@
+#popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: rgb(255, 123, 0);
+padding: 20px;
+border: 2px solid #333;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+
+
+}
+
+#popup button {
+margin: 5px;
+padding: 10px 20px;
+}
+
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color:rgb(255, 238, 0);
+    background-image: url('background.jpg');
+    background-size: cover;
+    font-size: 30px;
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    
+}
+
+button {
+  width: 200px;        /* button width */
+  height: 60px;        /* button height */
+  font-size: 15px;     /* text size */
+  padding: 15px 30px;  /* space inside button */
+}

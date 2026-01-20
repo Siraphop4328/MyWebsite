@@ -4,12 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sugar888</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>
       เกมสล๊อตออนไลน์หน้าใหม่! เเตกจริง เเตกเเรง รับรองโดยผู้ใช้มากกว่า 4
       เเสนคน! ต้อง SUGAR888
     </h1>
-    <button>เติมเงิน!</button>
+    <button onclick="showPopup()">เติมเงิน!</button>
+    <p>สุทธิ: <span id="display">฿0</span></p>
+
+    <div id="popup" style="display: none">
+      <h3>โปรดเลือกจำนวนการฝาก</h3>
+      <button onclick="addBalance(50)">฿50</button>
+      <button onclick="addBalance(100)">฿100</button>
+      <button onclick="addBalance(200)">฿200</button>
+      <button onclick="addBalance(500)">฿500</button>
+      <button onclick="addBalance(1000)">฿1000</button>
+      <button onclick="addBalance(2500)">฿2500 (เเนะนำ!)</button>
+      <button onclick="addBalance(5000)">฿5000</button>
+      <button onclick="addBalance(10000)">฿10000</button>
+      <button onclick="closePopup()">ปิด</button>
+    </div>
+
+    <div class="slot-machine">
+      <h2>ปั่นสล๊อต</h2>
+
+      <div class="slots">
+        <div class="slot" id="slot1">💀</div>
+        <div class="slot" id="slot2">😍</div>
+        <div class="slot" id="slot3">🤑</div>
+      </div>
+      <p id="result"></p>
+      <button onclick="spin()">กดเพื่อปั่น! ฿2500</button>
+    </div>
+
+    <audio id="addmoneysound" src="addMoney.mp3"></audio>
+    <script src="script.js"></script>
   </body>
 </html>
