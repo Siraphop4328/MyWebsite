@@ -22,11 +22,13 @@ function addBalance(amount)
 function spin()
 {
     if (balance < betAmount) {
+        document.getElementById('losesound').cloneNode().play()
         document.getElementById('result').textContent = 'เงินสุทธิไม่เพียงพอ กรุณาเติมเงิน';
         return;
     }
 
     balance -= betAmount;
+    document.getElementById('addmoneysound').cloneNode().play()
 
     let slot1 = symbols[Math.floor(Math.random() * symbols.length)];
     let slot2 = symbols[Math.floor(Math.random() * symbols.length)];
@@ -47,18 +49,22 @@ function checkWin(slot1, slot2, slot3)
     let resultText = document.getElementById('result');
 
     if (slot1 === slot2 && slot2 === slot3) {
+        document.getElementById('jackpotsound').cloneNode().play()
         let winAmount = 99999;
         balance += winAmount;
         resultText.textContent = 'JACKPOT เเตก!' + winAmount;
         resultText.style.color = 'yellow';
     }
     else if (slot1 === slot2 || slot2 === slot3 || slot1 === slot3){
+        document.getElementById('addmoneysound').cloneNode().play()
+
         let winAmount = 4000;
         balance += winAmount;
         resultText.textContent = 'ชนะ! ฿' + winAmount;
         resultText.style.color = 'green';
     }
     else{
+        document.getElementById('losesound').cloneNode().play()
         resultText.textContent = 'เสีย!';
         resultText.style.color = 'red';
     }
