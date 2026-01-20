@@ -38,3 +38,41 @@ button {
   font-size: 15px;     /* text size */
   padding: 15px 30px;  /* space inside button */
 }
+
+.slot-machine {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.slots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.slot {
+    font-size: 80px;  /* Makes emojis bigger */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+    .slot {
+        font-size: 60px;  /* Slightly smaller on mobile but still big */
+        width: 80px;
+        height: 80px;
+    }
+    
+    .slots {
+        gap: 5px;  /* Reduce gap on mobile to fit better */
+    }
+}
