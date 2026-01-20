@@ -54,6 +54,7 @@ function checkWin(slot1, slot2, slot3)
     }
     else if (slot1 === slot2 || slot2 === slot3 || slot1 === slot3){
         let winAmount = 4000;
+        balance += winAmount;
         resultText.textContent = 'ชนะ! ฿' + winAmount;
         resultText.style.color = 'green';
     }
