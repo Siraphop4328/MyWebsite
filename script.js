@@ -1,6 +1,6 @@
 let balance = 0;
 const symbols = ['💀', '😍', '🤑', '😡', '😂', '😫'];
-const betAmount = 2500;
+const betAmount = 2599;
 
 function showPopup()
 {
@@ -68,4 +68,11 @@ function checkWin(slot1, slot2, slot3)
         resultText.textContent = 'เสีย!';
         resultText.style.color = 'red';
     }
+}
+
+function checkout()
+{
+    balance =0;
+    document.getElementById('display').textContent = '฿ ' + balance;
+
 }
