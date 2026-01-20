@@ -30,6 +30,8 @@ const spinButton = document.querySelector('button[onClick="spin()"]');
     if (balance < betAmount) {
         document.getElementById('losesound').cloneNode().play()
         document.getElementById('result').textContent = 'เงินสุทธิไม่เพียงพอ กรุณาเติมเงิน';
+        document.getElementById('result').style.color='red';
+        
         return;
     }
 
